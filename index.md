@@ -6,7 +6,7 @@ Hello, World! This is a test.
 *This is in italics.*
 **This is in bold.**
 
-Visit [youtube](youtube.com) at this link
+Visit [youtube](https://www.youtube.com/) at this link
 
 ![Image](https://images.newscientist.com/wp-content/uploads/2019/06/18142824/einstein.jpg)
 
