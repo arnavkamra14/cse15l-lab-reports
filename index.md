@@ -29,3 +29,5 @@ Visit [youtube](https://www.youtube.com/) at this link.
 This represents a block of code
 It can also span multiple lines
 ```
+
+[Lab Report 1](lab-report-1-week-0.html)
