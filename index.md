@@ -4,7 +4,7 @@ Hello, World! This is a test.
 ## Created by: Arnav Kamra
 ## UCSD CSE 15L
 
-[Lab Report 0 (Random Screenshot](lab-report-1-week-0.html)
+[Lab Report 0 (Random Screenshot)](lab-report-1-week-0.html)
 
 *This is in italics.*
 **This is in bold.**
