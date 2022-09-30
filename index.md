@@ -4,6 +4,8 @@ Hello, World! This is a test.
 ## Created by: Arnav Kamra
 ## UCSD CSE 15L
 
+[Lab Report 0 (Random Screenshot](lab-report-1-week-0.html)
+
 *This is in italics.*
 **This is in bold.**
 
@@ -12,7 +14,6 @@ Visit [youtube](https://www.youtube.com/) at this link.
 ![Image](https://images.newscientist.com/wp-content/uploads/2019/06/18142824/einstein.jpg)
 
 > This is a blockquote
-> It can span multiple lines
 
 * List Item 1
 * List Item 2
@@ -30,4 +31,4 @@ This represents a block of code
 It can also span multiple lines
 ```
 
-[Lab Report 1](lab-report-1-week-0.html)
+
