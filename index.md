@@ -13,8 +13,6 @@ Hello, World! This is a test.
 
 [Lab Report 0 (Random Screenshot)](https://arnavkamra14.github.io/cse15l-lab-reports/Week%200/lab-report-1-week-0.html)
 
-
-
 *This is in italics.*
 
 **This is in bold.**
