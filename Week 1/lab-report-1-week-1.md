@@ -6,7 +6,6 @@
     **Note: Make sure to take into account your operating system when installing the software (OSX, Windows, Linux, etc.)**
 
 3. When installed you should have a welcome screen similar to the following:
-<br> </br>
 ![Image](VSCode.png)
 ___
 ## **Step 2.1: CSE 15L Account**
@@ -26,7 +25,6 @@ ___
     
     **Note: Make sure to enter your password correctly and press enter. The screen will not show any characters on the screen, and will automatically end the command after three failed attempts.**
 4. If successfully logged in, the terminal will greet you with the following prompt:
-<br> </br>
 ![Image](SuccessfulLogin.png)
 ___
 ## **Step 3: Trying Some Commands**
