@@ -3,12 +3,10 @@
 ### UCSD CSE 15L Fall 2022
 
 ---
-## Week 1 Lab
-
-
+## **[Week 1 Lab Report](/Week%201/lab-report-1-week-1.md)**
 ---
 
-## Week 0 Lab
+## **Week 0 Lab**
 
 
 Hello, World! This is a test.
