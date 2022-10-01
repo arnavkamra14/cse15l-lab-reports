@@ -52,7 +52,7 @@ ___
 ___
 ## **Step 4: Moving Files with `scp`**
 1. `scp` is used to copy a file/folder (or many files/folders) from your computer directly to the remote computer
-2. Make sure to run this command directly on your device's terminal, and not when logged in to the remote computer
+2. Make sure to run this command directly on your device's terminal, not when logged in to the remote computer
 3. Example of copying a sample Java file to the remote computer:
 
     ![Image](CopyJava.png)
