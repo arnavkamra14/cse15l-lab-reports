@@ -7,7 +7,7 @@
 
 3. When installed you should have a welcome screen similar to the following:
 ![Image](VSCode.png)
-___
+---
 ## **Step 2.1: CSE 15L Account**
 1. Look up your [CSE 15L course-specific username](https://sdacs.ucsd.edu/~icc/index.php) (this will be the email for the ssh remote connection)
 2. After logging in with your UCSD username and PID, you will be able to reset your password for the 15L course specific account
@@ -26,7 +26,7 @@ ___
     **Note: Make sure to enter your password correctly and press enter. The screen will not show any characters on the screen, and will automatically end the command after three failed attempts.**
 4. If successfully logged in, the terminal will greet you with the following prompt:
 ![Image](SuccessfulLogin.png)
-___
+---
 ## **Step 3: Trying Some Commands**
 1. While logged in, try some of the following commands:
     
@@ -47,7 +47,7 @@ ___
 ![Image](Exit.png)
 
     **Note: There are countless more commands with many useful applications (research Linux/terminal commands)**
-___
+---
 ## **Step 4: Moving Files with `scp`**
 1. `scp` is used to copy a file/folder (or many files/folders) from your computer directly to the remote computer
 2. Make sure to run this command directly on your device's terminal, not when logged in to the remote computer
@@ -59,7 +59,7 @@ ___
 
     ![Image](list.png)
 
-___
+---
 ## **Step 5: Setting an SSH Key**
 1. `ssh` keys are a way to bypass having to enter your password everytime `ssh` and `scp` are run
 2. For this to be done, a file containing a public and private key are created by a program called `ssh-keygen`
@@ -78,9 +78,8 @@ ___
         scp [DEFAULT PATH] cs15lfa22[xx]@ieng6.ucsd.edu:~/.ssh/authorized_keys
 
     **Note: Make sure to use the default path set in the previous step, as well as your personal acccount login** 
-___
+---
 ## **Step 6: Optimize Remote Running**
-___
 1. Setting up the `ssh` key allows chaining of commands for the remote connection
 2. Hence, the commands from Step 3 can be used in the same line as the `ssh` login, and commands can be chained using `;`
 
@@ -90,7 +89,7 @@ ___
 ![Image](ChainingCommands1.png)
 * Running `pwd` and `ls` concurrently on the remote computer:
 ![Image](ChainingCommands2.png)
-___
+---
 
 
 
