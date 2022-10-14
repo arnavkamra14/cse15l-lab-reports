@@ -83,7 +83,7 @@ class SearchEngine {
 
 **Query using SearchEngine.java:**
 ![Search](SearchApp.png)
-* The query feature relies on 'search' appearing in the server URL, similar to 'add' when adding.
+* The query feature relies on 'search' appearing in the server URL, similar to 'add' when adding
 * When a string is queried for, a for loop is run through the list of added words
 * Any matches containing the requested string will be added to a new ArrayList
 * If the size of the new List is greater than 0, the queried list is displayed. If not, a message indicating no matches found will be returned to the server
@@ -221,7 +221,9 @@ public void filterTest() {
 
     OK (1 test)
     ```
+
 **Bug Fix:**
+
 * In order for this test to pass, I had to implement the following class for the StringChecker interface:
     ```
     class IsHello implements StringChecker {
