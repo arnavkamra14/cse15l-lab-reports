@@ -78,7 +78,7 @@ class SearchEngine {
 ![Applications](AddApplications.png)
 * Whenever values are added, the URL of the server is updated, and therefore the Handler class containing the handleRequest function is run
 * Based on the URL path (which contains add in this case), the URL's contents are divided to isolate the word to be added
-* The word is then added to an arraylist (to be stored for the query feature), and a success message is returned to the server
+* The word is then added to an ArrayList (to be stored for the query feature), and a success message is returned to the server
 * This same process is repeated for each of the add URLs above, as shown by the message returned to the server
 
 **Query using SearchEngine.java:**
