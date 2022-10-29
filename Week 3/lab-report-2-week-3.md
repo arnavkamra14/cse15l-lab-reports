@@ -169,7 +169,6 @@ for(int i = 0; i < arr.length/2; i += 1) {
 ```
 
 **Symptom:**
-* Before Interface Implementation:
 ```
     1) mergeTest(ListTests)
     arrays first differed at element [3]; expected:<[Dog]> but was:<[Cat]>
