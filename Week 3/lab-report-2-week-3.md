@@ -91,7 +91,7 @@ class SearchEngine {
 ---
 
 ## **Part 2.1: Testing ArrayExamples.java**
-**Failure-inducing Input 1:** 
+**Failure-inducing Input:** 
 ```
 @Test
 public void testReverseInPlaceValues() {
@@ -101,7 +101,7 @@ public void testReverseInPlaceValues() {
     assertArrayEquals(expected, input1);
 }
 ```
-**Symptom 1:**
+**Symptom:**
 ```
 2) testReverseInPlaceValues(ArrayTests)
 arrays first differed at element [2]; expected:<3> but was:<5>
@@ -123,7 +123,7 @@ Caused by: java.lang.AssertionError: expected:<3> but was:<5>
 ```
 
 
-**Bug 1 Fix:**
+**Bug Fix:**
 ```
 for(int i = 0; i < arr.length/2; i += 1) {
       arr[i] = arr[arr.length - i - 1];
@@ -131,12 +131,12 @@ for(int i = 0; i < arr.length/2; i += 1) {
 ```
 * Change bounds of the for loop from arr.length to arr.length/2
 
-**Connection between Symptom and Bug 1:**
+**Connection between Symptom and Bug:**
 
 * After reaching the halfway point of the for loop responsible for reversing the array, the logic of the loop is no longer applicable
 * Therefore, only half of the values in the array get accurately switched
 
-**Failure-inducing Input 2:**
+**Failure-inducing Input:**
 ```
 @Test
   public void sameValueAverage() {
@@ -145,45 +145,6 @@ for(int i = 0; i < arr.length/2; i += 1) {
     assertEquals(expected, ArrayExamples.averageWithoutLowest(input1), 0.0);
 }
 ```
-
-**Symptom 2:**
-```
-1) sameValueAverage(ArrayTests)
-java.lang.AssertionError: expected:<4.0> but was:<1.5>
-        at org.junit.Assert.fail(Assert.java:89)
-        at org.junit.Assert.failNotEquals(Assert.java:835)
-        at org.junit.Assert.assertEquals(Assert.java:555)
-        at org.junit.Assert.assertEquals(Assert.java:685)
-        at ArrayTests.sameValueAverage(ArrayTests.java:37)
-```
-
-**Bug 2 Fix:**
-```
-static double averageWithoutLowest(double[] arr) {
-    doubl4 count = 0;
-    if(arr.length < 2) { 
-        return 0.0; 
-    }
-    double lowest = arr[0];
-    for(double num: arr) {
-        if(num < lowest) { lowest = num; }
-    }
-    double sum = 0;
-    for(double num: arr) {
-        if(num != lowest) {
-            count = count + 1; 
-            sum += num; 
-        }
-    }
-    return (sum / count);
-}
-```
-* Add a count variable to accurately keep track of how many values are added to the sum (in case the value equals the lowest value)
-* Divide the sum by that count variable to get the average
-
-**Connection between Symptom and Bug 2:**
-* The function is intended to take the average of the values in the array, excluding the lowest value in the array. However, the method does not take into account multiple of the lowest value (ie. multiple 1s shown in the test case)
-* Creating a seperate count for the values added to the sum ensures that the lowest value is never added to the sum, and that the right value count is used
 
 ---
 
