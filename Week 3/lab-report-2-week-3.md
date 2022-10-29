@@ -136,15 +136,6 @@ for(int i = 0; i < arr.length/2; i += 1) {
 * After reaching the halfway point of the for loop responsible for reversing the array, the logic of the loop is no longer applicable
 * Therefore, only half of the values in the array get accurately switched
 
-**Failure-inducing Input:**
-```
-@Test
-  public void sameValueAverage() {
-    double[] input1 = { 1, 1, 1, 2, 4 };
-    double expected = 4;
-    assertEquals(expected, ArrayExamples.averageWithoutLowest(input1), 0.0);
-}
-```
 
 ---
 
@@ -152,51 +143,66 @@ for(int i = 0; i < arr.length/2; i += 1) {
 **Failure-inducing Input:**
 ```
 @Test
-public void filterTest() {
-    List<String> input1 = new ArrayList<>();
-    input1.add("Hello");
-    input1.add("My");
-    input1.add("Name");
-    List<String> expected = new ArrayList<>();
-    expected.add("Hello");
+    public void mergeTest() {
 
-    assertArrayEquals(expected.toArray(), ListExamples.filter(input1, new IsHello()).toArray());
+        List<String> input1 = new ArrayList<>();
+        input1.add("Apple");
+        input1.add("Bat");
+        input1.add("California");
+
+        List<String> input2 = new ArrayList<>();
+        input2.add("Dog");
+        input2.add("Elephant");
+        input2.add("Firefighter");
+
+        List<String> expected = new ArrayList<>();
+        input1.add("Apple");
+        input1.add("Bat");
+        input1.add("California");
+        input2.add("Dog");
+        input2.add("Elephant");
+        input2.add("Firefighter");
+
+        assertArrayEquals(expected.toArray(), (ListExamples.merge(input1, input2)).toArray());
 
 }
 ```
 
 **Symptom:**
 * Before Interface Implementation:
-    ```
-    ListTests.java:16: error: StringChecker is abstract; cannot be instantiated
-        assertArrayEquals(expected.toArray(), ListExamples.filter(input1, new StringChecker()).toArray());
-    1 error
-    ```
-
-* After Interface Implementation:
-    ```
-    arnavkamra@Arnavs-MacBook-Pro lab3 % java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore ListTests
-    JUnit version 4.13.2
-    .
-    Time: 0.004
-
-    OK (1 test)
-    ```
+```
+    1) mergeTest(ListTests)
+    arrays first differed at element [3]; expected:<[Dog]> but was:<[Cat]>
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:78)
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:28)
+        at org.junit.Assert.internalArrayEquals(Assert.java:534)
+        at org.junit.Assert.assertArrayEquals(Assert.java:285)
+        at org.junit.Assert.assertArrayEquals(Assert.java:300)
+        at ListTests.mergeTest(ListTests.java:28)
+        ... 30 trimmed
+    Caused by: org.junit.ComparisonFailure: expected:<[Dog]> but was:<[Cat]>
+        at org.junit.Assert.assertEquals(Assert.java:117)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at org.junit.internal.ExactComparisonCriteria.assertElementsEqual(ExactComparisonCriteria.java:8)
+        at org.junit.internal.ComparisonCriteria.arrayEquals(ComparisonCriteria.java:76)
+        ... 36 more
+```
 
 **Bug Fix:**
-
-* In order for this test to pass, I had to implement the following class for the StringChecker interface:
-    ```
-    class IsHello implements StringChecker {
-        public boolean checkString(String s) {
-            return (s.contains("Hello"));
-        }
-    }
-    ```
+```
+if (list1.get(index1).compareTo(list2.get(index2)) < 0) {
+        result.add(list1.get(index1));
+        index1 += 1;
+} else {
+        result.add(list2.get(index2));
+        index2 += 1;
+}
+```
+* In the if-else statement of the while loop in the merge function, the else statement incremented index2 instead of index1.
 
 **Connection between Symptom and Bug:**
-* The interface for StringChecker in ListExamples.java was not implemented. Therefore, it could not be instantiated and have objects of it created.
-* In order for the filter function to work, it needs to be able to create an object for the StringChecker class (as it is a parameter of the method)
-* Once implemented, the method works as expected, proving that this error was implementation based
+* The mechanism in the function that compared the two values in the sorted lists was buggy. Hence two lists were not properly being compared to one another.
+* If the two lists were indepedently sorted and the merge function just needed to append one list to the other (ex. List 1: A, B, C and List 2: D, E, F), the function would work fine, the bug only occured when trying to compare each element in the list to the elements in the other list
+* Correctly incrementing the index2 allows the while loop to work as expected, correctly sorting the two lists into one another.
 
 
