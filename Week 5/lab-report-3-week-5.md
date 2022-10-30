@@ -16,49 +16,62 @@ arnavkamra@Arnavs-MacBook-Pro technical % less -N 911report/chapter-13.1.txt
       8                 adversaries, the United States confronts a number of less v      8 isible challenges that
 :
 ```
+**Why It's Useful:**
+* The `-N` option for the `less` command displays the line numbers of the file being opened.
+
 **Command 1.2**
 ```
-arnavkamra@Arnavs-MacBook-Pro technical % less -N government/Post_Rate_Comm/Cohenetal_Scale.txt
+arnavkamra@Arnavs-MacBook-Pro technical % less -N biomed/1471-2105-3-26.txt
 ```        
 
 **Output 1.2**
 ```
-      1 
-      2 
-      3 
-      4 
-      5 A MEASURE OF SCALE ECONOMIES FOR POSTAL SYSTEMS
-      6 ROBERT H. COHEN
-      7 
-      8 U. S. POSTAL RATE COMMISSION
-      9 EDWARD H. CHU
-     10 U.S. ENVIRONMENTAL PROTECTION AGENCY
-     11 
-     12 PUBLISHED IN MANAGING CHANGE IN THE POSTAL DELIVERY INDUSTRIES,
+    332         literature. We detected a small increase in expression of 
+    333         ICAM1 ( 
+    334         intercellular adhesion molecule 1 )
+    335         in CC (Fold-change = 1.9, p-value = 0.0081), which was also
+    336         consistent with the literature [ 17 ] .
+    337         The expression results for the genes 
+    338         JUN ( 
+    339         c-jun ) and 
+    340         VHL ( 
+    341         von Hippel-Lindau ) did not match the
+    342         literature [ 18 19 ] . Nor did the result for 
+    343         KRT7 ( 
+    344         cytokeratin 7 ), which has been shown
+    345         to be overexpressed in Chr [ 20 ] . Instead we found 
+    346         KRT7 to be strongly repressed in CC
 :
 ``` 
+**Why It's Useful:**
+* This option can be useful for referencing specific lines in the text, especially in large files
+
 **Command 1.3**
 ```
-arnavkamra@Arnavs-MacBook-Pro technical % less -N plos/journal.pbio.0020147.txt
+arnavkamra@Arnavs-MacBook-Pro technical % less -N government/Env_Prot_Agen/ctf1-6.txt
 ```
 **Output 1.3**
 ```
-      8         evolutionary theory is incomplete and that, in consequence, we are       8 failing fully to
-      9         understand phenomena as disparate as ecosystem development and the 
-      9 interplay of genes and
-     10         culture in shaping human evolution. What we are missing, they argue
-     10 , is an appreciation of
-     11         niche construction, the process by which an organism modifies the a
-     11 biotic and biotic
-     12         environment in which it is subject to natural selection. The author
-     12 s' major assertion is
-     13         that the importance of niche construction is so great that it shoul
-     13 d be regarded “after
-:
+   2088 organisms. If the acclimation process is repeated with a new group
+   2089 of test organisms and excessive mortality occurs, it is recommended
+   2090 that an alternative source of dilution water be used.
+   2091 
+   2092 
+   2093 6.7
+   2094 TEST ORGANISM DISPOSAL
+   2095 
+   2096 
+   2097 6.7.1 When the toxicity test(s) is concluded, all test organisms
+   2098 (including controls) should be humanely destroyed and disposed of
+   2099 in an appropriate manner.
+   2100 
+   2101 
+   2102 
+(END)
 ```
 **Why It's Useful:**
-* The `-N` option for the `less` command displays the line numbers of the file bein opened.
-* This command can be useful for referencing specific lines in the text, especially in large files, as well as manually showing the user how many lines are in the file (and which of them contain content)
+
+* The option also manually shows the user how many lines are in the file (and which of them contain content).
 
 ---
 
@@ -84,26 +97,36 @@ he field.
           
 plos/journal.pbio.0020012.txt lines 17-25/225 9%
 ```
+**Why It's Useful:**
+* The `-M` option for `less` shows a lot more information about the file when reading it
+* The manual of the option describes it to be similar to the `more` command.
+
 **Command 2.2**
 ```
 arnavkamra@Arnavs-MacBook-Pro technical % less -M biomed/1471-2105-2-8.txt 
 ```
 **Output 2.2**
 ```
-          b 
-          2 
-          b 
-          3 | 
-          t ), for some divergence "time" 
-          t , are derived from the chosen
-          substitution matrix (i.e. the choice of matrix defines 
-          t ). We make an independence
-          assumption that the conditional probability of each codon
-          depends only on its own encoded amino acid - i.e., it
-          does not depend on the the other codon - so we can use
-          the approximation
-biomed/1471-2105-2-8.txt lines 341-352/1495 21%
+by structural RNA evolution; (3) allowing gapped
+        alignments; and (4) allowing for the possibility that only
+        part of the pairwise alignment may represent a coding
+        region or structural RNA, because a primary sequence
+        alignment may extend into flanking noncoding or
+        nonstructural conserved sequence. These extensions add
+        complexity to the approach. We use probabilistic modeling
+        methods and formal languages to guide our construction. We
+        use "pair hidden Markov models" (pair-HMMs) (introduced in
+        [ 18 ] ) and a "pair stochastic context free grammar"
+        (pair-SCFG) (a natural extension of the pair-HMM idea to
+        RNA structure) to produce three evolutionary models for
+        "coding", "structural RNA", or "something else" (a null
+        hypothesis). Given three probabilistic models and a
+        pairwise sequence alignment to be tested, we can calculate
+biomed/1471-2105-2-8.txt lines 64-78/1495 6% 
 ```
+**Why It's Useful:**
+* This option is useful for providing information about the file as its being processed, such as the lines currently being read and the percentage of the file that has been read so far.
+
 **Command 2.3**
 ```
 arnavkamra@Arnavs-MacBook-Pro technical % less -M government/About_LSC/ODonnell_et_al_v_LSCdecision.txt  
@@ -125,9 +148,7 @@ Services Corp., 186 F.3d 457 (4th Cir. 1999), we concluded that a
 government/About_LSC/ODonnell_et_al_v_LSCdecision.txt lines 58-69/130 45%
 ```
 **Why It's Useful:**
-* The `-M` option for `less` shows a lot more information about the file when reading it, similar to the `more` command.
-* This option is useful for providing information about the file as its being processed, such as the lines currently being read and the percentage of the file that has been read so far.
-* Without this option there is no way to know how much of the file has been read.
+* Without this option there is no way to know how much of the file has been read while in the `less ` window.
 ---
 
 ## *less* command-line option 3: -S
@@ -152,6 +173,10 @@ arnavkamra@Arnavs-MacBook-Pro technical % less -S plos/journal.pbio.0020040.txt
         postulated in Alfred Knudson's (1971) two-hit model. And, indeed, it was sh
 :
 ```
+**Why It's Useful:**
+* This option changes the format of `less` for any lines that are longer than the viewing window. 
+* Normally, the line wraps into the next line, which can be confusing to see. Instead, the `-S` option cuts off each line and assures the file is shown exactly as originally created.
+
 **Command 3.2**
 ```
 arnavkamra@Arnavs-MacBook-Pro technical % less -S biomed/1471-2091-3-13.txt    
@@ -171,29 +196,29 @@ Background
         kDa N-terminal transesterification domain. The structure of
 :
 ```
+**Why It's Useful:**
+* For files that have very long lines, it's often useful to have its entire contents stored on a single line in the viewing window. 
+
 **Command 3.3**
 ```
 arnavkamra@Arnavs-MacBook-Pro technical % less -S government/Alcohol_Problems/Session4-PDF.txt
 ```
 **Output 3.3**
 ```
-Session 4.
-Implementing Preventive Interventions in
-Emergency Medicine: Strategic Considerations
+counseling are often
+provision of alcohol
+D) may provide an
+currently not actively
+wareness of their problem,
+r treatment on their
 
-Larry M. Gentilello, MD
-Individuals who may benefit from alcohol counseling are often
-unaware of their need for treatment. The provision of alcohol
-interventions in emergency departments (ED) may provide an
-opportunity to treat individuals who are currently not actively
-seeking such care. Due to their lack of awareness of their problem,
-these patients are unlikely to present for treatment on their
-own.
-Treatment does not need to be sought actively to be effective.1
-How-ever, motivation can facilitate treatment. Studies suggest that
+vely to be effective.1
+ment. Studies suggest that
+ze on the motivating
+itions that require
+e need for behavior
+ts who have not yet
 :
 ```
 **Why It's Useful:**
-* This option changes the format of `less` for any lines that are longer than the viewing window. Normally, the line wraps into the next line, which can be confusing to see. Instead, the `-S` command cuts off each line and assures the file is shown exactly as originally created.
-* For files that have very long lines, it's often useful to have its entire contents stored on a single line in the viewing window. 
 * It becomes easier to keep track of each line, since you can view the cut-off portion of the line with the right arrow key.
