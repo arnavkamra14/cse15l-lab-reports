@@ -99,7 +99,7 @@ plos/journal.pbio.0020012.txt lines 17-25/225 9%
 ```
 **Why It's Useful:**
 * The `-M` option for `less` shows a lot more information about the file when reading it
-* The manual of the option describes it to be similar to the `more` command.
+* The option's manual describes it to be similar to the `more` command.
 
 **Command 2.2**
 ```
@@ -148,7 +148,7 @@ Services Corp., 186 F.3d 457 (4th Cir. 1999), we concluded that a
 government/About_LSC/ODonnell_et_al_v_LSCdecision.txt lines 58-69/130 45%
 ```
 **Why It's Useful:**
-* Without this option, there is no way to know how much of the file has been read while in the `less ` window.
+* Without this option, there is no way to know how much of the file has been read while in the `less` window.
 ---
 
 ## *less* command-line option 3: -S
