@@ -147,8 +147,11 @@ In our recent decision in Regional Management Corp. v. Legal
 Services Corp., 186 F.3d 457 (4th Cir. 1999), we concluded that a
 government/About_LSC/ODonnell_et_al_v_LSCdecision.txt lines 58-69/130 45%
 ```
+
 **Why It's Useful:**
 * Without this option, there is no way to know how much of the file has been read while in the `less` window.
+
+
 ---
 
 ## *less* command-line option 3: -S
