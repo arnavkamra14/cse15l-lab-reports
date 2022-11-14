@@ -21,6 +21,7 @@
 - Therefore, to replace all occurrences of start to base in the file, the command becomes the following (assuming the file is open in Vim): 
         
         :s%/start/base/g
+        
 **Vim window of DocSearchServer.java before command executes:**
 
 ![Before](before.png)
