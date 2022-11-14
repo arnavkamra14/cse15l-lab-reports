@@ -22,11 +22,13 @@
         
         :s%/start/base/g
 **Vim window of DocSearchServer.java before command executes:**
+
 ![Before](before.png)
 
 * Once the command is typed in, the cursor selects the first instance of `start` to be replaced
 
 **Vim window of DocSearchServer.java after command executes:**
+
 ![After](after.png)
 
 * Once the command executes, the Vim command line shows the number of substitutions made
