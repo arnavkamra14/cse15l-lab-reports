@@ -4,6 +4,8 @@
 ---
 ### UCSD CSE 15L Fall 2022
 ---
+## **[Week 9 - Lab Report 5](https://arnavkamra14.github.io/cse15l-lab-reports/Week%209/lab-report-5-week-9.html)**
+---
 ## **[Week 7 - Lab Report 4](https://arnavkamra14.github.io/cse15l-lab-reports/Week%207/lab-report-4-week-7.html)**
 ---
 ## **[Week 5 - Lab Report 3](https://arnavkamra14.github.io/cse15l-lab-reports/Week%205/lab-report-3-week-5.html)**
