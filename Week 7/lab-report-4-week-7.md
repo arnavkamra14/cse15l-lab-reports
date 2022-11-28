@@ -14,19 +14,22 @@
 
         :s/<searchTerm>/<termToReplace>/options
 
-- The /g option replaces every instance on the line
+- The `/g` option replaces every instance on the line
 
-- However, in order to replace the entire file, we must use the % shorthand, which is used at the beginning of a command to reference the whole file
+- However, in order to replace the entire file, we must use the `%` shorthand, which is used at the beginning of a command to reference the whole file
 
 - Therefore, to replace all occurrences of start to base in the file, the command becomes the following (assuming the file is open in Vim): 
         
         :s%/start/base/g
+        
 **Vim window of DocSearchServer.java before command executes:**
+
 ![Before](before.png)
 
 * Once the command is typed in, the cursor selects the first instance of `start` to be replaced
 
 **Vim window of DocSearchServer.java after command executes:**
+
 ![After](after.png)
 
 * Once the command executes, the Vim command line shows the number of substitutions made
